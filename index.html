@@ -72,6 +72,7 @@
             </form>
          </div>
       </section>
+      
       <!-- Trending -->
        <section class="trending container" id=" trending">
          <!-- heading -->
@@ -391,6 +392,20 @@
             <p class="copyright">&#169; 2024 RentKaar </p>
          </div>
          </div>
+         <!-- login popup -->
+<div class="login-popup" id="loginPopup">
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+    <h2>Login</h2>
+    <form onsubmit="return loginUser()">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#">Register</a></p>
+  </div>
+</div>
+
          <!-- scrool revwl animantion -->
           <script src="https://unpkg.com/scrollreveal"></script>
      <script src="main.js"></script>

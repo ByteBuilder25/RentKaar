@@ -33,3 +33,34 @@ animate.reveal(".nav");
 animate.reveal(".home-img img", {origin:"right"});
 animate.reveal(".input-form", {origin:"bottom"});
 animate.reveal(".trending-box, .rental-box,.team-box,.t-box,.newsletter", {interval:100});
+// open login on profile icon click
+document.querySelector('.user-icon').addEventListener('click', () => {
+  document.getElementById('loginPopup').style.display = 'flex';
+});
+
+// close login popup
+function closeLogin() {
+  document.getElementById('loginPopup').style.display = 'none';
+}
+
+// close popup when clicking outside the box
+window.addEventListener('click', (e) => {
+  const popup = document.getElementById('loginPopup');
+  if (e.target === popup) {
+    popup.style.display = 'none';
+  }
+});
+
+// simple login check
+function loginUser() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if (email === "sachinkverma74@gmail.com" && password === "sachin") {
+    alert("Login Successful!");
+    closeLogin(); // hide popup after login
+  } else {
+    alert("Invalid Email or Password");
+  }
+  return false; // prevent form refresh
+}
